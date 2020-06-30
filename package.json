@@ -1,0 +1,19 @@
+{
+  "name": "flexum.io",
+  "version": "1.0.0",
+  "author": "Myron Mavko <mmavko@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "cp": "cp src/index.html dist/index.html && cp -r src/assets dist/assets",
+    "tailwind": "tailwindcss build src/style.css -o dist/style.css",
+    "build:dev": "yarn clean && yarn cp && yarn tailwind",
+    "build": "yarn clean && yarn cp && NODE_ENV=production yarn tailwind"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "tailwindcss": "^1.4.6",
+    "tailwindcss-gradients": "^3.0.0"
+  }
+}

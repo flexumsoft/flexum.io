@@ -1,0 +1,226 @@
+/* purgecss start ignore */
+
+@tailwind base;
+
+/* latin-ext */
+@font-face {
+  font-family: 'Sen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sen Regular'), local('Sen-Regular'), url(./assets/fonts/sen/6xKjdSxYI9_3kvWNAGn5LEwJ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Sen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sen Regular'), local('Sen-Regular'), url(./assets/fonts/sen/6xKjdSxYI9_3nPWNAGn5LA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Sen';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Sen Bold'), local('Sen-Bold'), url(./assets/fonts/sen/6xKudSxYI9__J9CYI0v0BnYASNr7.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Sen';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Sen Bold'), local('Sen-Bold'), url(./assets/fonts/sen/6xKudSxYI9__J9CYLUv0BnYASA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Sen';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Sen ExtraBold'), local('Sen-ExtraBold'), url(./assets/fonts/sen/6xKudSxYI9__O9OYI0v0BnYASNr7.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Sen';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Sen ExtraBold'), local('Sen-ExtraBold'), url(./assets/fonts/sen/6xKudSxYI9__O9OYLUv0BnYASA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+a.link {
+  @apply text-black underline;
+}
+a.link:hover {
+  @apply bg-flexum-accent2;
+}
+a.link:active {
+  @apply bg-flexum-accent;
+}
+
+p, ul, ol, .par {
+  @apply my-3;
+}
+@screen sm {
+  p, ul, ol, .par {
+    @apply my-5;
+  }
+}
+
+ul, ol, li {
+  @apply ml-3;
+}
+@screen sm {
+  ul, ol, li {
+    @apply ml-4;
+  }
+}
+
+ul:not(.dense) li, ol:not(.dense) li {
+  @apply my-1;
+}
+@screen sm {
+  ul:not(.dense) li, ol:not(.dense) li {
+    @apply my-2;
+  }
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+strong {
+  @apply font-bold;
+}
+
+.right-space {
+  @apply mr-3;
+}
+@screen sm {
+  .right-space {
+    @apply mr-5;
+  }
+}
+
+.left-space {
+  @apply ml-3;
+}
+@screen sm {
+  .left-space {
+    @apply ml-5;
+  }
+}
+
+
+@tailwind components;
+
+h3 {
+  @apply text-base font-semibold text-flexum mt-8 mb-5;
+}
+h3:after, h3:before {
+  content: ' ';
+  @apply bg-star inline-block mx-3 align-middle;
+  --size: 9px;
+  width: var(--size);
+  height: var(--size);
+}
+@screen sm {
+  h3 {
+    @apply text-2xl mt-16 mb-10;
+  }
+  h3:after, h3:before {
+    --size: 11px;
+    @apply mx-4;
+  }
+}
+
+h4 {
+  @apply font-bold mt-8 mb-5;
+}
+h4:before {
+  content: ' ';
+  @apply bg-bookmark inline-block ml-1 mr-2 align-middle;
+  --size: 9px;
+  width: var(--size);
+  height: var(--size);
+}
+@screen sm {
+  h4 {
+    @apply mt-12 mb-8;
+  }
+  h4:before {
+    --size: 11px;
+    @apply mx-3;
+  }
+}
+
+.main {
+  @apply max-w-screen-md mx-auto px-4;
+}
+@screen sm {
+  .main {
+    @apply px-8;
+  }
+}
+
+.banner {
+  --size: 7px;
+  height: calc(17 * var(--size));
+}
+@screen sm {
+  .banner {
+    --size: 14px;
+    height: calc(19 * var(--size));
+  }
+}
+
+.touch {
+  @apply py-2px px-2 mx-1;
+  @apply bg-flexum-accent2 border-2 border-transparent;
+  @apply text-smaller text-black italic;
+}
+.touch:hover {
+  @apply border-flexum-accent;
+}
+.touch:active {
+  @apply bg-flexum-accent;
+}
+@screen sm {
+  .touch {
+    @apply py-1 px-4 mx-2;
+  }
+}
+
+.core-services {
+  @apply my-4;
+}
+.core-services li {
+  @apply my-2 text-smaller font-semibold text-flexum;
+}
+@screen sm {
+  .core-services {
+    @apply my-6;
+  }
+  .core-services li {
+    @apply my-3;
+  }
+}
+
+/* purgecss end ignore */
+
+
+@tailwind utilities;
